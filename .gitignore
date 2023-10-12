@@ -21,3 +21,5 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+ssh-dnd5e
+ssh-dnd5e.pub
