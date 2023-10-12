@@ -35,6 +35,17 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Navbar from "./components/general/Navbar.vue";
 import SpellsPage from "./components/spells/SpellsPage.vue";
+import StatsPage from "./components/general/StatsPage.vue";
+import SettingsPage from "./components/general/SettingsPage.vue";
+import OGLPage from "./components/general/OGLPage.vue";
+import TipsPage from "./components/general/TipsPage.vue";
+import AreasPage from "./components/general/AreasPage.vue";
+import AboutPage from "./components/general/AboutPage.vue";
+import NewsPage from "./components/general/NewsPage.vue";
+import UpdatesPage from "./components/general/UpdatesPage.vue";
+import ContentPage from "./components/general/ContentPage.vue";
+import RulesPage from "./components/rules/RulesPage.vue";
+import NotFound from "./components/general/NotFound.vue";
 import Alert from "./components/general/Alert.vue";
 import UpdateNotice from "./components/general/UpdateNotice.vue";
 

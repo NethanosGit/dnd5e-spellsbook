@@ -45,7 +45,8 @@
       "no-empty": "off",
       "vue/no-mutating-props": "off",
       "vue/no-useless-template-attributes": "off",
-      "no-case-declarations": "off"
+      "no-case-declarations": "off",
+      "vue/require-v-for-key": "off"
     }
   },
   "browserslist": [
