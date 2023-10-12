@@ -73,7 +73,6 @@ class ContentDatabase {
   // Fetch a JSON from a URL and then load it
   loadURL(url) {
     return new Promise((resolve, reject) => {
-      console.log(url);
       fetch(url)
         .then((res) => res.json())
         .then((json) => {

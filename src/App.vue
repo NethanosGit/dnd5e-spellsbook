@@ -123,10 +123,9 @@ export default {
         process.env.VUE_APP_DEFAULT_CONTENTFILES.split(",");
       this.awaitingInitialFetch = true;
       Promise.all(
-        defaultContentFileURLs.map((url) => {
-          console.log(url);
-          this.app.contentDatabase.loadURL(url);
-        })
+        defaultContentFileURLs.map((url) =>
+          this.app.contentDatabase.loadURL(url)
+        )
       ).then(() => {
         this.app.reloadDatabase();
         this.awaitingInitialFetch = false;
