@@ -57,6 +57,7 @@ const timeBetweenAppUpdateChecksInMs = 1000 * 60 * 60 * 1; // 1 hour
 const router = new VueRouter({
   mode: "history",
   routes: [
+    { path: "/dnd5e-spellsbook", component: SpellsPage },
     { path: "/", component: SpellsPage },
     { path: "/spells/:urlSpellName", component: SpellsPage, props: true },
     { path: "/spells", redirect: "/" }, // This path was used in previous versions of the app, we leave this redirection to prevent 404'ing users
