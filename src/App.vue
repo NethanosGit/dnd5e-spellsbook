@@ -124,11 +124,13 @@ export default {
       this.awaitingInitialFetch = true;
       Promise.all(
         defaultContentFileURLs.map((url) => {
-          this.app.contentDatabase.loadURL(
+          url =
             process.env.NODE_ENV === "production"
               ? `dnd5e-spellsbook${url}`
-              : url
-          );
+              : url;
+          console.log(url);
+
+          this.app.contentDatabase.loadURL(url);
         })
       ).then(() => {
         this.app.reloadDatabase();
