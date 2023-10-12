@@ -23,6 +23,7 @@
       </div>
       <router-view v-else :app="app"></router-view>
     </main>
+    <Alert ref="alert" />
   </div>
 </template>
 
@@ -31,6 +32,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Navbar from "./components/general/Navbar.vue";
 import SpellsPage from "./components/spells/SpellsPage.vue";
+import Alert from "./components/general/Alert.vue";
 
 import ContentDatabase from "@/util/contentDatabase.js";
 import SettingsDatabase from "@/util/settingsDatabase.js";
@@ -47,6 +49,7 @@ export default {
   router,
   components: {
     Navbar,
+    Alert,
   },
   data() {
     const contentDatabase = ContentDatabase.getFromStorageOrBlank();
