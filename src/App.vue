@@ -124,7 +124,7 @@ export default {
       this.awaitingInitialFetch = true;
       Promise.all(
         defaultContentFileURLs.map((url) =>
-          this.app.contentDatabase.loadURL(`${url}`)
+          this.app.contentDatabase.loadURL(url)
         )
       ).then(() => {
         this.app.reloadDatabase();
