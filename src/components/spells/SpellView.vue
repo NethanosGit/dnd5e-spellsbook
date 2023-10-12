@@ -265,6 +265,7 @@ export default {
 .spell-name {
   font-size: 22px;
   font-weight: bold;
+  color: white;
 }
 .spell-type {
   font-size: 16px;

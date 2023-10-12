@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="mt-0">
     <Navbar :enabled="!awaitingInitialFetch" />
     <main class="container-fluid">
       <div v-if="awaitingInitialFetch" class="text-center">
@@ -56,7 +56,23 @@ import constants from "@/util/constants.js";
 const timeBetweenAppUpdateChecksInMs = 1000 * 60 * 60 * 1; // 1 hour
 const router = new VueRouter({
   mode: "history",
-  routes: [{ path: "/", component: SpellsPage }],
+  routes: [
+    { path: "/", component: SpellsPage },
+    { path: "/spells/:urlSpellName", component: SpellsPage, props: true },
+    { path: "/spells", redirect: "/" }, // This path was used in previous versions of the app, we leave this redirection to prevent 404'ing users
+    { path: "/rules/:urlRuleName", component: RulesPage, props: true },
+    { path: "/rules", component: RulesPage },
+    { path: "/stats", component: StatsPage },
+    { path: "/settings", component: SettingsPage },
+    { path: "/tips", component: TipsPage },
+    { path: "/areas", component: AreasPage },
+    { path: "/about", component: AboutPage },
+    { path: "/news", component: NewsPage },
+    { path: "/content", component: ContentPage },
+    { path: "/ogl", component: OGLPage },
+    { path: "/updates", component: UpdatesPage },
+    { path: "*", component: NotFound },
+  ],
 });
 
 export default {
@@ -175,12 +191,35 @@ Vue.directive("focus", {
 </script>
 
 <style>
+body {
+  background-color: #1b1b1b !important;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: white;
+  background-color: #1b1b1b !important;
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif !important;
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Ubuntu Regular"), local("Ubuntu-Regular"),
+    url(./fonts/ubuntu.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+#loadingIcon {
+  width: 120px;
+  margin-top: 100px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 </style>

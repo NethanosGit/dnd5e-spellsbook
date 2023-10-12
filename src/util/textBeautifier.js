@@ -116,6 +116,7 @@ TextBeautifier.substitutions = [
   ],
   [/((melee|ranged)( spell)? attacks?)/g, '<span class="sx-attack">$1</span>'],
   [/\bby\s(\d*?d\d+)/g, 'by <span class="sx-die">$1</span>'],
+  [/(\b(\d*?d\d+)\b)/g, '<span class="sx-die">$1</span>'],
 ];
 TextBeautifier.rulesRegex =
   /(blinded|blindsight|bright light|charmed|darkvision|deafened|dim light|exhaustion|frightened|heavily obscured|grappled|incapacitated|invisible|lightly obscured|paralyzed|petrified|poisoned|prone|restrained|stunned|truesight|unconscious)/g;
