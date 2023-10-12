@@ -74,6 +74,7 @@ class ContentDatabase {
   loadURL(url) {
     const baseURL =
       process.env.NODE_ENV === "production" ? process.env.BASE_URL + url : url;
+    console.log(baseURL);
     return new Promise((resolve, reject) => {
       fetch(`${baseURL}`)
         .then((res) => res.json())
