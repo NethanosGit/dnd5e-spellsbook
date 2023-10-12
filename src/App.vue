@@ -24,6 +24,9 @@
       <router-view v-else :app="app"></router-view>
     </main>
     <Alert ref="alert" />
+    <UpdateNotice
+      v-if="app.appUpdateAvailable && this.$route.path != '/updates'"
+    />
   </div>
 </template>
 
@@ -33,6 +36,7 @@ import VueRouter from "vue-router";
 import Navbar from "./components/general/Navbar.vue";
 import SpellsPage from "./components/spells/SpellsPage.vue";
 import Alert from "./components/general/Alert.vue";
+import UpdateNotice from "./components/general/UpdateNotice.vue";
 
 import ContentDatabase from "@/util/contentDatabase.js";
 import SettingsDatabase from "@/util/settingsDatabase.js";
@@ -50,6 +54,7 @@ export default {
   components: {
     Navbar,
     Alert,
+    UpdateNotice,
   },
   data() {
     const contentDatabase = ContentDatabase.getFromStorageOrBlank();
