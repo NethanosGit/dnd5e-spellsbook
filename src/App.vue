@@ -123,9 +123,13 @@ export default {
         process.env.VUE_APP_DEFAULT_CONTENTFILES.split(",");
       this.awaitingInitialFetch = true;
       Promise.all(
-        defaultContentFileURLs.map((url) =>
-          this.app.contentDatabase.loadURL(url)
-        )
+        defaultContentFileURLs.map((url) => {
+          url =
+            process.env.NODE_ENV === "production"
+              ? `dnd5e-spellsbook/${url}`
+              : url;
+          this.app.contentDatabase.loadURL(`dnd5e-spellsbook/${url}`);
+        })
       ).then(() => {
         this.app.reloadDatabase();
         this.awaitingInitialFetch = false;
