@@ -72,8 +72,10 @@ class ContentDatabase {
   }
   // Fetch a JSON from a URL and then load it
   loadURL(url) {
+    const baseURL =
+      process.env.NODE_ENV === "production" ? process.env.BASE_URL + url : url;
     return new Promise((resolve, reject) => {
-      fetch(`${url}`)
+      fetch(`${baseURL}`)
         .then((res) => res.json())
         .then((json) => {
           try {
