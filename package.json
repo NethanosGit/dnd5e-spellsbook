@@ -11,7 +11,9 @@
     "bootstrap": "^5.3.2",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
+    "debounce": "^1.2.1",
     "vue": "^2.7.14",
+    "vue-clickaway": "^2.2.2",
     "vue-meta": "^2.4.0",
     "vue-router": "^3.6.5"
   },
@@ -39,7 +41,11 @@
     },
     "rules": {
       "no-unused-vars": "off",
-      "vue/multi-word-component-names": "off"
+      "vue/multi-word-component-names": "off",
+      "no-empty": "off",
+      "vue/no-mutating-props": "off",
+      "vue/no-useless-template-attributes": "off",
+      "no-case-declarations": "off"
     }
   },
   "browserslist": [
