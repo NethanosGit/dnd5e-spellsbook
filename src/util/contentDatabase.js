@@ -72,8 +72,11 @@ class ContentDatabase {
   }
   // Fetch a JSON from a URL and then load it
   loadURL(url) {
+    const isProduction = process.env.NODE_ENV === "production";
+    const repositoryPath = isProduction ? "/dnd5e-spellsbook" : "";
+    const fullURL = `https://nethanosgit.github.io${repositoryPath}${url}`;
     return new Promise((resolve, reject) => {
-      fetch(url)
+      fetch(fullURL)
         .then((res) => res.json())
         .then((json) => {
           try {
