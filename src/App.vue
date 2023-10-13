@@ -131,24 +131,6 @@ export default {
         this.app.reloadDatabase();
         this.awaitingInitialFetch = false;
       });
-    } else {
-      // If an existing database was loaded, ensure the SRD is up-to-date
-      if (
-        this.app.contentDatabase.data.sources.some(
-          (s) => s.name == "SRD 5.1" && s.version < constants.srdVersion
-        )
-      ) {
-        this.app.contentDatabase
-          .loadURL("/srd.json")
-          .then(() => {
-            this.app.reloadDatabase();
-          })
-          .catch((err) => {
-            this.showError(err);
-          });
-      } else {
-        this.app.reloadDatabase();
-      }
     }
   },
   watch: {
