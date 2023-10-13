@@ -5214,8 +5214,7 @@
           "materials": "a small amount of makeup applied to the face as this spell is cast",
           "concentration": true,
           "ritual": false,
-          "description": "For the duration, you have advantage on all Charisma checks directed at one creature of your choice that isn't hostile toward you. When the spell ends, the creature realizes that you used magic to influence its mood and becomes hostile toward you. A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM's discretion), depending on the nature of your interaction with it.",
-          "atHigherLevel": null
+          "description": "<p>For the duration, you have advantage on all Charisma checks directed at one creature of your choice that isn't hostile toward you. When the spell ends, the creature realizes that you used magic to influence its mood and becomes hostile toward you. A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM's discretion), depending on the nature of your interaction with it.</p>"
         },
         {
           "name": "Blade Ward",
@@ -5238,8 +5237,7 @@
           "materials": null,
           "concentration": false,
           "ritual": false,
-          "description": "You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you have resistance against bludgeoning, piercing, and slashing damage dealt by weapon attacks.",
-          "atHigherLevel": null
+          "description": "<p>You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you have resistance against bludgeoning, piercing, and slashing damage dealt by weapon attacks.</p>"
         },
         {
           "name": "Witch Bolt",
@@ -5247,15 +5245,15 @@
           "school": "evocation",
           "level": 1,
           "range": "30 feet",
-          "duration": "Concentration, up to 1 minute",
+          "duration": "Up to 1 minute",
+          "concentration": true,
           "casting": "1 action",
           "verbal": true,
           "somatic": true,
           "material": 1,
           "materials": "a twig from a tree that has been struck by lightning",
-          "concentration": true,
           "ritual": false,
-          "description": "A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell's range or if it has total cover from you.",
+          "description": "<p>A beam of crackling, blue energy lances out toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against that creature. On a hit, the target takes 1d12 lightning damage, and on each of your turns for the duration, you can use your action to deal 1d12 lightning damage to the target automatically. The spell ends if you use your action to do anything else. The spell also ends if the target is ever outside the spell's range or if it has total cover from you.</p>",
           "atHigherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the initial damage increases by 1d12 for each slot level above 1st."
         },
         {
@@ -5276,7 +5274,7 @@
           "materials": null,
           "concentration": false,
           "ritual": false,
-          "description": "You invoke the power of Hadar, the Dark Hunger. Tendrils of dark energy erupt from you and batter all creatures within 10 feet of you. Each creature in that area must make a Strength saving throw. On a failed save, a target takes 2d6 necrotic damage and can't take reactions until its next turn. On a successful save, the creature takes half damage, but suffers no other effect.",
+          "description": "<p>You invoke the power of Hadar, the Dark Hunger. Tendrils of dark energy erupt from you and batter all creatures within 10 feet of you. Each creature in that area must make a Strength saving throw. On a failed save, a target takes 2d6 necrotic damage and can't take reactions until its next turn. On a successful save, the creature takes half damage, but suffers no other effect.</p>",
           "atHigherLevel": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
         },
         {
@@ -5291,9 +5289,9 @@
           "somatic": true,
           "material": 1,
           "materials": "a cup of water",
-          "concentration": true,
+          "concentration": false,
           "ritual": false,
-          "description": "A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear. You gain 5 temporary hit points for the duration. If a creature hits you with a melee attack while you have these hit points, the creature takes 5 cold damage.",
+          "description": "<p>A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear. You gain 5 temporary hit points for the duration. If a creature hits you with a melee attack while you have these hit points, the creature takes 5 cold damage.</p>",
           "atHigherLevel": "When you cast this spell using a spell slot of 2nd level or higher, both the temporary hit points and the cold damage increase by 5 for each slot level above 1st."
         },
         {
@@ -5303,14 +5301,14 @@
           "level": 2,
           "range": "120 feet",
           "duration": "Up to 1 minute",
+          "concentration": true,
           "casting": "1 action",
           "verbal": true,
           "somatic": true,
           "material": 0,
           "materials": null,
-          "concentration": true,
           "ritual": false,
-          "description": "One humanoid of your choice that you can see within range must succeed on a Wisdom saving throw or become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.\n\nThe charmed target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target can act normally on its turn if you choose no creature or if none are within its reach.\n\nOn your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends."
+          "description": "<p>One humanoid of your choice that you can see within range must succeed on a Wisdom saving throw or become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.</p><p>The charmed target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target can act normally on its turn if you choose no creature or if none are within its reach.</p><p>On your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends.</p>"
         },
         {
           "name": "Cloud of Daggers",
@@ -5318,6 +5316,10 @@
           "school": "conjuration",
           "level": 2,
           "range": "60 feet",
+          "aoe": {
+            "type": "cube",
+            "side": 5
+          },
           "duration": "Up to 1 minute",
           "casting": "1 action",
           "verbal": true,
@@ -5326,8 +5328,27 @@
           "materials": "a sliver of glass",
           "concentration": true,
           "ritual": false,
-          "description": "You fill the air with spinning daggers in a cube 5 feet on each side, centered on a point you choose within range. A creature takes 4d4 slashing damage when it enters the spell's area for the first time on a turn or starts its turn there.",
+          "description": "<p>You fill the air with spinning daggers in a cube 5 feet on each side, centered on a point you choose within range. A creature takes 4d4 slashing damage when it enters the spell's area for the first time on a turn or starts its turn there.</p>",
           "atHigherLevel": "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 2d4 for each slot level above 2nd."
+        },
+        {
+          "name": "Hunger of Hadar",
+          "classes": ["warlock"],
+          "school": "conjuration",
+          "level": 3,
+          "range": {
+            "type": "sphere",
+            "radius": 20
+          },
+          "duration": "Up to 1 minute",
+          "casting": "1 action",
+          "verbal": true,
+          "somatic": true,
+          "material": 1,
+          "materials": "a pickled octopus tentacle",
+          "concentration": true,
+          "ritual": false,
+          "description": "<p>You open a gateway to the dark between the stars, a region infested with unknown horrors. A 20-foot-radius sphere of blackness and bitter cold appears, centered on a point within range and lasting for the duration. This void is filled with a cacophony of soft whispers and slurping noises that can be heard up to 30 feet away. No light, magical or otherwise, can illuminate the area, and creatures fully within the area are blinded.</p><p>The void creates a warp in the fabric of space, and the area is difficult terrain. Any creature that starts its turn in the area takes 2d6 cold damage. Any creature that ends its turn in the area must succeed on a Dexterity saving throw or take 2d6 acid damage as milky, otherworldly tentacles rub against it.</p>"
         }
       ],
       "rules": [
