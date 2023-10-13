@@ -5336,10 +5336,7 @@
           "classes": ["warlock"],
           "school": "conjuration",
           "level": 3,
-          "range": {
-            "type": "sphere",
-            "radius": 20
-          },
+          "range": "150 feet",
           "duration": "Up to 1 minute",
           "casting": "1 action",
           "verbal": true,
