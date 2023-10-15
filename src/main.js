@@ -7,7 +7,6 @@ import BootstrapVue from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import "./assets/application.css";
-import './registerServiceWorker'
 
 Vue.use(BootstrapVue);
 Vue.use(VueRouter);
